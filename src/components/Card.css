@@ -1,0 +1,18 @@
+.card {
+  font-size: 8em;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+}
+
+/* hearts & diamonds */
+.card.red {
+  color: var(--card-red);
+}
+
+/* spades & clubs */
+.card.black {
+  color: var(--card-black);
+}

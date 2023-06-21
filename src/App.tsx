@@ -1,12 +1,13 @@
 import './App.css'
+import Deck from './components/Deck'
 
 function App() {
 
   return (
     <>
       <h1>Cards</h1>
-      <div className="card">
-        Hello react
+      <div className="table">
+        <Deck />
       </div>
     </>
   )
