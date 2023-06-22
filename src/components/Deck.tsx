@@ -1,11 +1,11 @@
 import { useState, useMemo } from 'react'
 import { CARD_DATA } from '../lib/card-data'
-import { sleep } from '../lib/utils'
+import { shuffleArray, sleep } from '../lib/utils'
 import Card from './Card'
 import './Deck.css'
 
 // duration of flip animation for each card during reset (in ms)
-const FLIP_DURATION = 100;
+const FLIP_DURATION = 50;
 
 const Deck = () => {
   const [cards, setCards] = useState(
@@ -18,7 +18,7 @@ const Deck = () => {
     setCards([...cards])
   }
 
-  const onHide = async () => {
+  const hideCards = async () => {
     for (let i = 0; i < cards.length; i++) {
       const card = cards[i];
       if (card.flipped) {
@@ -27,6 +27,22 @@ const Deck = () => {
         setCards([...cards])
       }
     }
+  }
+
+  const shuffleCards = async () => {
+    await hideCards()
+    setCards(c => {
+      shuffleArray(c)
+      return [...c]
+    })
+  }
+
+  const sortCards = async () => {
+    await hideCards()
+    setCards(c => {
+      c.sort((c1, c2) => c2.id - c1.id)
+      return [...c]
+    })
   }
 
   const openCount = useMemo(
@@ -50,9 +66,15 @@ const Deck = () => {
         ))}
       </div>
 
-      <button onClick={onHide}>
-        Hide
-      </button>
+      <div className="buttons">
+        <button onClick={shuffleCards}>
+          Shuffle
+        </button>
+
+        <button onClick={sortCards}>
+          Sort
+        </button>
+      </div>
     </>
   )
 }

@@ -1,6 +1,9 @@
 .deck {
   height: 15em;
-  width: 10em;
   user-select: none;
   cursor: pointer;
+}
+
+.buttons > * {
+  margin: 5px;
 }
