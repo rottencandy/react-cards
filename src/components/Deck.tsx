@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { CARD_DATA } from '../lib/card-data'
 import { sleep } from '../lib/utils'
 import Card from './Card'
@@ -29,8 +29,16 @@ const Deck = () => {
     }
   }
 
+  const openCount = useMemo(
+    () => cards.reduce(
+      (acc, card) => card.flipped ? acc + 1 : acc, 0
+    ), [cards]
+  )
+
   return (
     <>
+      <p>{openCount} / {cards.length}</p>
+
       <div className="deck">
         {cards.map((card, i) => (
           <Card
