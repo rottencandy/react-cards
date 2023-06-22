@@ -5,10 +5,19 @@ function App() {
 
   return (
     <>
-      <h1>Cards</h1>
-      <div className="table">
+      <h1>cards</h1>
+
+      <main>
         <Deck />
-      </div>
+      </main>
+
+      <br/>
+
+      <footer>
+        <a href="https://github.com/rottencandy/react-cards" target="_blank">
+          source
+        </a>
+      </footer>
     </>
   )
 }
