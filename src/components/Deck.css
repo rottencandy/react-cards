@@ -1,0 +1,5 @@
+.deck {
+  user-select: none;
+  height: 15em;
+  width: 10em;
+}

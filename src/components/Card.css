@@ -3,7 +3,6 @@
   width: 5em;
   height: 8em;
   perspective: 500px;
-  user-select: none;
   transition: transform 0.2s ease-out;
   transform: translateX(-5em);
 }
