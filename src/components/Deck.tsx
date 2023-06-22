@@ -3,7 +3,11 @@ import Card from "./Card"
 
 const Deck = () => {
   return (
-    <Card card={CARD_DATA[0]} flipped />
+    <>
+      {CARD_DATA.map((c, i) => (
+        <Card card={c} idx={i} flipped />
+      ))}
+    </>
   )
 }
 
