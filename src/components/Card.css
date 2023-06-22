@@ -19,19 +19,19 @@
 .front {
   font-size: 8em;
   background-color: var(--card-bg);
+  transform: rotateY(180deg);
 }
 
 .back {
   background-color: #44a;
-  transform: rotateY(180deg);
 }
 
 .front.red { color: var(--card-red) }
 .front.black { color: var(--card-black) }
 
 .card.flipped { transform: translateX(5em) }
-.front.flipped { transform: rotateY(180deg) }
-.back.flipped { transform: rotateY(360deg) }
+.front.flipped { transform: rotateY(360deg) }
+.back.flipped { transform: rotateY(180deg) }
 
 @media (prefers-reduced-motion: no-preference) {
   .card, .front, .back {
