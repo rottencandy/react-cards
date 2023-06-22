@@ -1,4 +1,4 @@
-import { CardType, CardColor, CARD_DATA } from '../lib/card-data';
+import { CardType, CardColor, CARD_DATA } from '../lib/card-data'
 import './Card.css'
 
 const MAX = CARD_DATA.length;

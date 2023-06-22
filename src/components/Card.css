@@ -23,7 +23,7 @@
 }
 
 .back {
-  background-color: #44a;
+  background: linear-gradient(to top left, #227, #44a)
 }
 
 .front.red { color: var(--card-red) }
