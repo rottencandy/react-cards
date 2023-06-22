@@ -1,5 +1,6 @@
 .card {
-  position: relative;
+  position: absolute;
+  width: 5em;
   height: 8em;
   perspective: 500px;
   user-select: none;
