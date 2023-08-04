@@ -9,21 +9,21 @@ Click on cards to view.
 
 ### Setup
 
-Requires [yarn](https://yarnpkg.com).
+Requires [npm](https://npmjs.com).
 
 Install dependencies:
 ```sh
-yarn install
+npm install
 ```
 
 Start dev server:
 ```sh
-yarn dev
+npm dev
 ```
 
 Prod build:
 ```sh
-yarn build
+npm build
 ```
 
 ### License
