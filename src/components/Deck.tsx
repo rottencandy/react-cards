@@ -5,7 +5,7 @@ import Card from './Card'
 import './Deck.css'
 
 // duration of flip animation for each card during reset (in ms)
-const FLIP_DURATION = 50;
+const FLIP_DURATION = 50
 
 const Deck = () => {
   const [cards, setCards] = useState(
@@ -13,17 +13,17 @@ const Deck = () => {
   )
 
   const onCardClick = (idx: number) => {
-    const card = cards[idx];
+    const card = cards[idx]
     card.flipped = !card.flipped
     setCards([...cards])
   }
 
   const hideCards = async () => {
     for (let i = 0; i < cards.length; i++) {
-      const card = cards[i];
+      const card = cards[i]
       if (card.flipped) {
-        await sleep(FLIP_DURATION);
-        card.flipped = false;
+        await sleep(FLIP_DURATION)
+        card.flipped = false
         setCards([...cards])
       }
     }

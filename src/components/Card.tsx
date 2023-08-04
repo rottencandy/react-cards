@@ -1,7 +1,7 @@
 import { CardType, CardColor, CARD_DATA } from '../lib/card-data'
 import './Card.css'
 
-const MAX = CARD_DATA.length;
+const MAX = CARD_DATA.length
 
 type CardProps = {
   card: CardType & { flipped: boolean },
